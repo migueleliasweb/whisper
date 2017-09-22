@@ -1,3 +1,3 @@
-from whisper import webserver
+from whisper.webserver import app
 
-webserver.run()
+app.run()
