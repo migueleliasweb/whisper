@@ -9,4 +9,4 @@ RUN apt-get update -y && apt-get install -y --no-install-recommends gcc python-d
     && pip install uwsgi==2.0.15 \
     && apt-get remove -y libssl-dev gcc python-dev
 
-ENTRYPOINT ["/usr/local/bin/uwsgi", "--threads", "4", "--processes", "2", "--http-socket", "--module", "entrypoint", "--callable", "app"]
+CMD ["/usr/local/bin/uwsgi", "--master", "--threads", "4", "--processes", "2", "--http", "0.0.0.0:80", "--module", "whisper.webserver", "--callable", "app"]
