@@ -1,3 +1,4 @@
 credstash==1.13.2
+uwsgi==2.0.15
 Flask==0.12.2
 requests==2.18.4
