@@ -10,4 +10,4 @@ RUN apt-get update -y && apt-get install -y --no-install-recommends gcc python-d
     && pip install -r requirements.txt \
     && apt-get remove -y libssl-dev gcc python-dev
 
-CMD ["entrypoint.py"]
+CMD ["/opt/app/entrypoint.py"]
